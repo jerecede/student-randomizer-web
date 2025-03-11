@@ -1,0 +1,48 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Arial";
+}
+
+#students-container{
+    width: 100%;
+    border: solid 1px crimson;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.student-container, .student-container2{
+    border: solid 1px crimson;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "name"
+    "country"
+    "gender"
+    "age";
+    gap: 5px;
+}
+
+.name-container{
+    border: solid 1px crimson;
+    font-size: large;
+    font-weight: bold;
+    grid-area: name;
+}
+
+.country-container{
+    border: solid 1px crimson;
+    grid-area: country;
+}
+
+.gender-container{
+    border: solid 1px crimson;
+    grid-area: gender;
+}
+
+.age-container{
+    border: solid 1px crimson;
+    grid-area: age;
+}
