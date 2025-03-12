@@ -23,6 +23,7 @@ header{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: auto;
+    min-height: 70vh;
     
 }
 
