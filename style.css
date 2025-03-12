@@ -10,7 +10,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color:  #ccffff;
-    border-bottom: solid 10px  #2eb8b8;
+    border-bottom: solid 5px  black;
     color: black;
     height: 12vh;
     font-size: xx-large;
@@ -75,5 +75,5 @@ footer{
     background-color: #ccffff;
     color: black;
     height: 15vh;
-    border-top: solid 10px  #2eb8b8;
+    border-top: solid 5px black;
 }
