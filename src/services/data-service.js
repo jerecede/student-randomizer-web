@@ -115,10 +115,17 @@ class DataService {
         // return richData;
     }
 
-    getStudentsBy(){
+    getStudentsByAge(){
         const students = this.getStudentsData();
         const studentsClone = students.slice();
         studentsClone.sort((s1, s2) => s1.compareByAge(s2));
+        return studentsClone;
+    }
+
+    getStudentsByName(){
+        const students = this.getStudentsData();
+        const studentsClone = students.slice();
+        studentsClone.sort((s1, s2) => s1.compareByName(s2));
         return studentsClone;
     }
 
