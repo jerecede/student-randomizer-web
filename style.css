@@ -21,8 +21,8 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 85vh;
-    margin-bottom: 10%;
+    height: auto;
+    
 }
 
 .student-container{
@@ -37,8 +37,9 @@ header{
     gap: 5px;
     background-color: #ccffff;
     border-radius: 10px;
-    margin: 10% 30% 0px 30%;
     box-shadow: 10px 15px 19px -2px rgba(0,0,0,0.15);
+    margin: 20px;
+    padding: 30px;
 }
 
 .name-container{
