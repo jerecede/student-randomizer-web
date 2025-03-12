@@ -36,17 +36,23 @@ const studentData = service.getStudentsData();
 
 // }
 
+studentData.sort((s1, s2) => {
+    if (s1.name < s2.name) {
+        return -1;
+    }
+    if (s1.name > s2.name) {
+        return 1;
+    }
+    return 0;
+});
+
 const container = document.getElementById('students-container');
 
 for (let i = 0; i < studentData.length; i++) {
     const student = studentData[i];
 
     const studentContainer = document.createElement('div');
-    if(i%2 === 0){
-        studentContainer.classList.add('student-container');
-    } else {
-        studentContainer.classList.add('student-container2');
-    }
+    studentContainer.classList.add('student-container');
 
     const nameContainer = document.createElement('span');
     nameContainer.classList.add('name-container');

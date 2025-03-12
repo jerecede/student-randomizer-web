@@ -2,18 +2,31 @@ body{
     padding: 0;
     margin: 0;
     font-family: "Arial";
+    background-color: white;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #ccffff;
+    border-bottom: solid 10px  #2eb8b8;
+    color: black;
+    height: 12vh;
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 #students-container{
     width: 100%;
-    border: solid 1px crimson;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 85vh;
+    margin-bottom: 75px;
 }
 
-.student-container, .student-container2{
-    border: solid 1px crimson;
+.student-container{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -23,26 +36,43 @@ body{
     "gender"
     "age";
     gap: 5px;
+    margin: 75px 250px 0px 250px;
+    background-color: #ccffff;
+    border-radius: 10px;
 }
 
 .name-container{
-    border: solid 1px crimson;
     font-size: large;
     font-weight: bold;
     grid-area: name;
+    align-self: center;
+    text-align: center;
 }
 
 .country-container{
-    border: solid 1px crimson;
     grid-area: country;
+    align-self: center;
+    text-align: center;
 }
 
 .gender-container{
-    border: solid 1px crimson;
     grid-area: gender;
+    align-self: center;
+    text-align: center;
 }
 
 .age-container{
-    border: solid 1px crimson;
     grid-area: age;
+    align-self: center;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccffff;
+    color: black;
+    height: 15vh;
+    border-top: solid 10px  #2eb8b8;
 }
