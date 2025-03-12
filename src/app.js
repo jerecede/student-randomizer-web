@@ -2,7 +2,7 @@ import DataService from "./services/data-service.js";
 
 const service = new DataService();
 
-const studentData = service.getStudentsData();
+const studentData = service.getShuffledStudents();
 
 // //CREA DIV
 
@@ -36,16 +36,6 @@ const studentData = service.getStudentsData();
 
 // }
 
-studentData.sort((s1, s2) => {
-    if (s1.name < s2.name) {
-        return -1;
-    }
-    if (s1.name > s2.name) {
-        return 1;
-    }
-    return 0;
-});
-
 const container = document.getElementById('students-container');
 
 for (let i = 0; i < studentData.length; i++) {
@@ -69,12 +59,9 @@ for (let i = 0; i < studentData.length; i++) {
     const genderNode = document.createTextNode('Gender: ' + student.gender);
     genderContainer.appendChild(genderNode);
 
-    const now = new Date();
-    const year = now.getFullYear();
-    const age = year - student.yob;
     const ageContainer = document.createElement('span');
     ageContainer.classList.add('age-container');
-    const ageNode = document.createTextNode('Age: ' + age);
+    const ageNode = document.createTextNode('Age: ' + student.getAge());
     ageContainer.appendChild(ageNode);
 
     studentContainer.appendChild(nameContainer);
