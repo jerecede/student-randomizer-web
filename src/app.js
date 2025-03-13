@@ -66,31 +66,11 @@ function reder(studentsData) {
 
         const nameContainer = createTextElement('span',student.name + ' ' + student.surname, 'name-container');
 
-        // const nameContainer = document.createElement('span');
-        // nameContainer.classList.add('name-container');
-        // const nameNode = document.createTextNode(student.name + ' ' + student.surname);
-        // nameContainer.appendChild(nameNode);
-
         const countryContainer = createTextElement('span','Nazionalità: ' + student.nationality);
-
-        // const countryContainer = document.createElement('span');
-        // countryContainer.classList.add('country-container'); //non serviva
-        // const countryNode = document.createTextNode('Nazionalità: ' + student.nationality);
-        // countryContainer.appendChild(countryNode);
 
         const genderContainer = createTextElement('span','Gender: ' + student.gender);
 
-        // const genderContainer = document.createElement('span');
-        // genderContainer.classList.add('gender-container'); //non serviva
-        // const genderNode = document.createTextNode('Gender: ' + student.gender);
-        // genderContainer.appendChild(genderNode);
-
         const ageContainer = createTextElement('span','Age: ' + student.getAge());
-
-        // const ageContainer = document.createElement('span');
-        // ageContainer.classList.add('age-container'); //non serviva
-        // const ageNode = document.createTextNode('Age: ' + student.getAge());
-        // ageContainer.appendChild(ageNode);
 
         studentContainer.appendChild(nameContainer);
         studentContainer.appendChild(countryContainer);
