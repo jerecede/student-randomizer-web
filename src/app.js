@@ -3,23 +3,28 @@ import DataService from "./services/data-service.js";
 const service = new DataService();
 
 function orderByName(){
-    const studentData = service.getStudentsByName();
-    reder(studentData);
+    service.getStudentsByName().then(studentData => reder(studentData));
 }
 
 function orderByAge(){
-    const studentData = service.getStudentsByAge();
+    const studentPromise = service.getStudentsByAge();
+    studentPromise.then(studentData => reder(studentData));
+}
+
+async function shuffle(){
+    const studentData = await service.getShuffledStudents();
     reder(studentData);
 }
 
-function shuffle(){
-    const studentData = service.getShuffledStudents();
-    reder(studentData);
+function getStudents(){
+    const studentPromise = service.getStudentsData();
+    studentPromise.then(studentData => reder(studentData));
 }
 
 window.orderByName = orderByName;
 window.orderByAge = orderByAge;
 window.shuffle = shuffle;
+window.getStudents = getStudents;
 
 // //CREA DIV
 
